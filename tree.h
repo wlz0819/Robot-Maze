@@ -11,7 +11,10 @@ namespace robot_maze{
         private:
             std::map<int,std::vector<int>> my_tree;
         public:
+            void InstTree();
             std::map<int,std::vector<int>> GetTree();
+            std::vector<int> FindPrevious(int start);
+            std::vector<int> PrevToPath(int start, int stop);
     };
 } //namespace robot_maze
 
