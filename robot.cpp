@@ -7,5 +7,9 @@ int main(){
     for(auto i : myprevious){
         cout << i << endl;
     }
+    vector<int> mypath = tree.PrevToPath(0,3,myprevious);
+    for(auto i : mypath){
+        cout << i << endl;
+    }
     return 0;
 }

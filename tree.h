@@ -14,7 +14,7 @@ namespace robot_maze{
             void InstTree();
             std::map<int,std::vector<int>> GetTree();
             std::vector<int> FindPrevious(int start);
-            std::vector<int> PrevToPath(int start, int stop);
+            std::vector<int> PrevToPath(int start, int stop, std::vector<int> previous);
     };
 } //namespace robot_maze
 

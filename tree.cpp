@@ -1,11 +1,11 @@
 #include "tree.h"
 using namespace std;
 void robot_maze::Tree::InstTree(){
-    my_tree.insert(pair<int,vector<int>>(0,{1}));
-    my_tree.insert(pair<int,vector<int>>(1,{2}));
-    my_tree.insert(pair<int,vector<int>>(2,{3,4}));
+    my_tree.insert(pair<int,vector<int>>(0,{1,2}));
+    my_tree.insert(pair<int,vector<int>>(1,{3}));
+    my_tree.insert(pair<int,vector<int>>(2,{4}));
     my_tree.insert(pair<int,vector<int>>(3,{}));
-    my_tree.insert(pair<int,vector<int>>(4,{}));
+    my_tree.insert(pair<int,vector<int>>(4,{3}));
 }
 map<int,vector<int>> robot_maze::Tree::GetTree(){
     return my_tree;
@@ -33,4 +33,11 @@ vector<int> robot_maze::Tree::FindPrevious(int start){
     }
     return previous;
 }
-//vector<int> robot_maze::Tree::PrevToPath(int start,int stop){}
+vector<int> robot_maze::Tree::PrevToPath(int start,int stop, vector<int> previous){
+    vector<int> path;
+    path.insert(path.begin(),stop);
+    while(!(path[0] == start)){
+        path.insert(path.begin(),previous[path[0]]);
+    }
+    return path;
+}
