@@ -1,4 +1,5 @@
 #include "tree.h"
+#include "maze.h"
 using namespace std;
 int main(){
     robot_maze::Tree tree;
@@ -10,6 +11,15 @@ int main(){
     vector<int> mypath = tree.PrevToPath(0,3,myprevious);
     for(auto i : mypath){
         cout << i << endl;
+    }
+    robot_maze::Maze maze;
+    maze.BlankMaze();
+    vector<vector<char>> mymaze = maze.GetMaze();
+    for(auto i : mymaze){
+        for(auto x : i){
+            cout << x << ' ';
+        }
+        cout << endl;
     }
     return 0;
 }
