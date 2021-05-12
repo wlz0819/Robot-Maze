@@ -14,8 +14,10 @@ int main(){
     }
     robot_maze::Maze maze;
     maze.BlankMaze();
-    vector<vector<char>> mymaze = maze.GetMaze();
-    for(auto i : mymaze){
+    maze.MakeMaze(10);
+    maze.AddStart();
+    maze.AddEnd();
+    for(auto i : maze.GetMaze()){
         for(auto x : i){
             cout << x << ' ';
         }
