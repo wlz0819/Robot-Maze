@@ -2,10 +2,10 @@
 using namespace std;
 void robot_maze::Tree::InstTree(){
     my_tree.insert(pair<int,vector<int>>(0,{1,2}));
-    my_tree.insert(pair<int,vector<int>>(1,{3}));
+    my_tree.insert(pair<int,vector<int>>(1,{}));
     my_tree.insert(pair<int,vector<int>>(2,{4}));
     my_tree.insert(pair<int,vector<int>>(3,{}));
-    my_tree.insert(pair<int,vector<int>>(4,{3}));
+    my_tree.insert(pair<int,vector<int>>(4,{}));
 }
 map<int,vector<int>> robot_maze::Tree::GetTree(){
     return my_tree;

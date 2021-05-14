@@ -5,6 +5,7 @@
 #include <map>
 #include <vector>
 #include <queue>
+#include <algorithm>
 
 using namespace std;
 namespace robot_maze{
@@ -19,7 +20,7 @@ namespace robot_maze{
         vector<vector<char>> AddStart();
         vector<vector<char>> AddEnd();
         char RetrieveChar(pair<int,int>);
-        map<pair<int,int>,pair<int,int>> MazeToTree();
+        vector<pair<int,int>> MazeToTree();
     };
 } // namespace robot_maze
 #endif //MAZE
